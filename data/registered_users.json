@@ -1,0 +1,38 @@
+[
+  {
+    "id": "usr-1790505249904",
+    "name": "Soldado Teste",
+    "email": "soldado.teste@foconafarda.com.br",
+    "role": "user",
+    "passwordHash": "81c6c7a613f911c25e1e05e7adb49032259cb1e511e3ae64e8d8e97a7ff18cf03aee339e9a180fd5d8e57570cfe9e3fab039129a6a631cb8319899baaf7bef76",
+    "salt": "bfbaed6de32d4fb6d63dd540cadec98c",
+    "loginMethod": "email",
+    "isBlocked": false,
+    "mfaEnabled": false,
+    "mfaVerified": false,
+    "termsAcceptedAt": "2026-09-27T10:34:09.904Z",
+    "privacyPolicyAcceptedAt": "2026-09-27T10:34:09.904Z",
+    "termsVersion": "1.0.0",
+    "privacyVersion": "1.0.0",
+    "createdAt": "2026-09-27T10:34:09.904Z",
+    "questionsAnsweredCount": 0
+  },
+  {
+    "id": "usr-1790516939694",
+    "name": "Novo Recruta Teste",
+    "email": "recruta.teste@foconafarda.com.br",
+    "role": "user",
+    "passwordHash": "43944746cf66e8d38b2fa8e2d662f385f546f36e90b1d3139f2da2ea2221b6b176adde62059ddf7c5893c47e65dfd3829aa82b1f4452b5bbfde74fea36fcc560",
+    "salt": "0871e553aa5f7986b8ac57e2f8e319a4",
+    "loginMethod": "email",
+    "isBlocked": false,
+    "mfaEnabled": false,
+    "mfaVerified": false,
+    "termsAcceptedAt": "2026-09-27T13:48:59.694Z",
+    "privacyPolicyAcceptedAt": "2026-09-27T13:48:59.694Z",
+    "termsVersion": "1.0.0",
+    "privacyVersion": "1.0.0",
+    "createdAt": "2026-09-27T13:48:59.694Z",
+    "questionsAnsweredCount": 0
+  }
+]

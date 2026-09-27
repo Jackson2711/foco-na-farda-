@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>FOCO NA FARDA</title>
+    <meta name="description" content="Plataforma nacional e PWA para preparação, radar de concursos, simulados e organização de estudos para carreiras de segurança pública no Brasil." />
+    <meta property="og:title" content="FOCO NA FARDA" />
+    <meta property="og:description" content="Plataforma nacional e PWA para preparação, radar de concursos, simulados e organização de estudos para carreiras de segurança pública no Brasil." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0A1128" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="FocoNaFarda" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-[#070D1E] text-slate-100 antialiased min-h-screen selection:bg-amber-500 selection:text-black">
+    <div id="root"></div>
+    <script>
+      // Tratamento preventivo de WebSocket e erros de conexão assíncrona (evita Unhandled Rejection e erros não tratados)
+      window.addEventListener('unhandledrejection', function(event) {
+        var reason = event.reason;
+        var msg = '';
+        if (typeof reason === 'string') {
+          msg = reason;
+        } else if (reason && typeof reason === 'object') {
+          msg = reason.message || reason.stack || String(reason);
+        }
+        if (
+          msg.indexOf('WebSocket') !== -1 ||
+          msg.indexOf('websocket') !== -1 ||
+          msg.indexOf('closed without opened') !== -1 ||
+          msg.indexOf('failed to connect to websocket') !== -1
+        ) {
+          event.preventDefault();
+          event.stopPropagation();
+          return false;
+        }
+      });
+      window.addEventListener('error', function(event) {
+        var msg = (event && (event.message || (event.error && event.error.message))) || '';
+        if (
+          typeof msg === 'string' &&
+          (msg.indexOf('WebSocket') !== -1 ||
+           msg.indexOf('websocket') !== -1 ||
+           msg.indexOf('closed without opened') !== -1 ||
+           msg.indexOf('failed to connect to websocket') !== -1)
+        ) {
+          event.preventDefault();
+          event.stopPropagation();
+          return true;
+        }
+      });
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

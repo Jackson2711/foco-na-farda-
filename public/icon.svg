@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A1128" />
+      <stop offset="100%" stop-color="#001F54" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD700" />
+      <stop offset="50%" stop-color="#F4B41A" />
+      <stop offset="100%" stop-color="#B8860B" />
+    </linearGradient>
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F4B41A" />
+      <stop offset="100%" stop-color="#D4AF37" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="512" height="512" rx="100" fill="url(#bgGrad)" />
+
+  <!-- Outer Shield Contour -->
+  <path d="M256 60 L410 115 C410 270 345 385 256 445 C167 385 102 270 102 115 Z" 
+        fill="#0E1E38" stroke="url(#shieldBorder)" stroke-width="12" stroke-linejoin="round" />
+
+  <!-- Inner Shield Fill -->
+  <path d="M256 82 L388 130 C388 260 332 360 256 414 C180 360 124 260 124 130 Z" 
+        fill="#0A1424" stroke="#1E293B" stroke-width="4" />
+
+  <!-- Target / Reticle Circles -->
+  <circle cx="256" cy="225" r="95" fill="none" stroke="rgba(244, 180, 26, 0.25)" stroke-width="3" stroke-dasharray="8 6" />
+  <circle cx="256" cy="225" r="55" fill="none" stroke="rgba(244, 180, 26, 0.45)" stroke-width="2" />
+
+  <!-- Crosshairs -->
+  <line x1="256" y1="110" x2="256" y2="150" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+  <line x1="256" y1="300" x2="256" y2="340" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+  <line x1="140" y1="225" x2="180" y2="225" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+  <line x1="332" y1="225" x2="372" y2="225" stroke="url(#goldGrad)" stroke-width="4" stroke-linecap="round" />
+
+  <!-- Tactical 5-Point Star -->
+  <polygon points="256,160 278,212 334,215 291,250 305,304 256,273 207,304 221,250 178,215 234,212"
+           fill="url(#goldGrad)" filter="drop-shadow(0 4px 10px rgba(244,180,26,0.5))" />
+
+  <!-- Banner ribbon at bottom of shield -->
+  <path d="M165 375 L256 360 L347 375 L335 400 L256 385 L177 400 Z" fill="#F4B41A" />
+  <text x="256" y="380" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="16" fill="#0A1128" text-anchor="middle" letter-spacing="3">BRASIL</text>
+</svg>

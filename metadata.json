@@ -1,0 +1,6 @@
+{
+  "name": "FOCO NA FARDA",
+  "description": "Plataforma nacional e PWA para preparação, radar de concursos, simulados e organização de estudos para carreiras de segurança pública no Brasil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
